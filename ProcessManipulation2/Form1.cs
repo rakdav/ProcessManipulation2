@@ -85,8 +85,7 @@ namespace ProcessManipulation2
         {
             int parentId = 0;
             using (ManagementObject obj =
-            new ManagementObject("win32_process.handle=" +
-            Id.ToString()))
+            new ManagementObject("win32_process.handle=" +Id.ToString()))
             {
                 obj.Get();
                 parentId = Convert.ToInt32(obj["ParentProcessId"]);
